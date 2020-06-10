@@ -9,14 +9,14 @@ script:
   - docker run -e CI=true baremaximum/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t baremaximum/DumbFibonacci-client ./client
-  - docker build -t baremaximum/DumbFibonacci-reverse-proxy ./nginx
-  - docker build -t baremaximum/DumbFibonacci-server ./server
-  - docker build -t baremaximum/DumbFibonacci-worker ./worker
+  - docker build -t baremaximum/dumbfibonacci-client ./client
+  - docker build -t baremaximum/dumbfibonacci-reverse-proxy ./nginx
+  - docker build -t baremaximum/dumbfibonacci-server ./server
+  - docker build -t baremaximum/dumbfibonacci-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push baremaximum/DumbFibonacci-client
-  - docker push baremaximum/DumbFibonacci-reverse-proxy
-  - docker push baremaximum/DumbFibonacci-server
-  - docker push baremaximum/DumbFibonacci-worker
+  - docker push baremaximum/dumbfibonacci-client
+  - docker push baremaximum/dumbfibonacci-reverse-proxy
+  - docker push baremaximum/dumbfibonacci-server
+  - docker push baremaximum/dumbfibonacci-worker
 
 

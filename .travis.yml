@@ -25,7 +25,7 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   region: us-east-2
   app: dumbfibonacci
-  env: Dumbfibonacci-env
+  env: Dumbfibonacci-env-2
   bucket_name: elasticbeanstalk-us-east-2-832435077746
   bucket_path: dumbfibonacci
   on:

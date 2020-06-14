@@ -18,7 +18,7 @@ before_install:
   - docker build -t baremaximum/react-test -f ./client/Dockerfile.dev .
 
 script:
-  - docker run -e CI=true baremaximum/react-test npm run test -- --coverage
+  - docker run -e CI=true baremaximum/react-test npm run test
 
 deploy:
   provider: script
